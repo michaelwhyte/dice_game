@@ -29,7 +29,6 @@ $btnNewGame.click(function(){
 $btnRollDice.click(function(){
 
 	if(!gameFinished){
-	
 	  var thePlayerDice = game.rollDice();
 	  var theComputerDice = game.rollDice();
 	  var playerRoundScore = game.getDiceScore(thePlayerDice);
@@ -51,9 +50,7 @@ $btnRollDice.click(function(){
 		  game.checkWin(playerTotalScore, computerTotalScore);
 		  gameFinished = true;		
 	  }
-	
 	}
-	
 	
 });
 
@@ -63,7 +60,6 @@ function Game(){
 	
 	var die01;
 	var die02;
-	var counterRound = 0;
 	
 	this.init = function(){
 		$playerDice01Out.html('&nbsp;'); 
@@ -83,7 +79,6 @@ function Game(){
 	this.rollDice = function(){
 		die01 = Math.floor(Math.random()*6 + 1);
 		die02 = Math.floor(Math.random()*6 + 1);
-		counterRound++;	
 		return [die01, die02];
 	}
 	
