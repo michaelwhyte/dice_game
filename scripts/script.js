@@ -9,7 +9,7 @@ var $computerDice01Out = $('.computer_output .dice_01_out span');
 var $computerDice02Out = $('.computer_output .dice_02_out span');
 var $playerScoreRoundOut = $('.player_output .score_round span');
 var $playerScoreTotalOut = $('.player_output .score_total span');
-var $computerScoreRoundOut = $('.computer_output .score_round span') 
+var $computerScoreRoundOut = $('.computer_output .score_round span'); 
 var $computerScoreTotalOut = $('.computer_output .score_total span');
 var $btnNewGame = $('.btn_new_game');
 var $btnRollDice = $('.btn_roll_dice');
@@ -74,16 +74,16 @@ function Game(){
 		playerTotalScore = 0;
 		computerTotalScore = 0;
 		gameFinished = false;  
-	}
+	};
 	
 	this.rollDice = function(){
 		die01 = Math.floor(Math.random()*6 + 1);
 		die02 = Math.floor(Math.random()*6 + 1);
 		return [die01, die02];
-	}
+	};
 	
 	this.getDiceScore = function(rolledDice){
-		diceScore = 0;
+		var diceScore = 0;
 		if(rolledDice[0] === 1 || rolledDice[1] === 1){
 			diceScore = 0;
 			return diceScore;	
@@ -94,11 +94,11 @@ function Game(){
 			diceScore = rolledDice[0] + rolledDice[1];
 			return diceScore;	
 		}
-	}   	
+	};  	
 	
 	this.getTotalScore = function(currentDiceScore, currentTotalScore){
 			return currentDiceScore + currentTotalScore;
-	}
+	};
 	
 	this.checkWin = function(playerScore, computerScore){
 		if(playerScore > computerScore){
@@ -108,7 +108,6 @@ function Game(){
 		}else{
 			alert('Player and Computer tied');	
 		}	
-	}	
+	};	
 	
 }
-
