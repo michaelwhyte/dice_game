@@ -1,4 +1,4 @@
-dice_game
+Dice Game
 =========
 
 HTML/CSS/JS Dice game
